@@ -19,7 +19,7 @@ class String
     count = 0
     
     while i < self.length do
-      count += 1 if is_ending?(self[i-1]) == false && is_ending?(self[i])
+      count += 1 if !is_ending?(self[i-1]) && is_ending?(self[i])
       i +=1
     end
     
