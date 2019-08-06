@@ -15,12 +15,10 @@ class String
   end
 
   def count_sentences
-    i = 0
     count = 0
     
-    while i < self.length do
+    self.each_char.with_index do |char, i|
       count += 1 if !is_ending?(self[i-1]) && is_ending?(self[i])
-      i +=1
     end
     
     count
