@@ -29,6 +29,6 @@ class String
   end
   
   def is_ending?(char)
-    self[char] == "." || self[char] == "?" || self[char] == "!"
+    char == "." || char == "?" || char == "!"
   end
 end
