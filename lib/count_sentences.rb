@@ -19,10 +19,16 @@ class String
     count = 0
     
     while i < self.length do
-      count += 1 if self[i] == "." || self[i] == "?" || self[i] == "!"
+      if !self[i-1] == "." || self[i] == "?" || self[i] == "!"
+        count += 1 if is_ending?(self[i])
+      end
       i +=1
     end
     
     count
+  end
+  
+  def is_ending?(char)
+    self[char] == "." || self[char] == "?" || self[char] == "!"
   end
 end
