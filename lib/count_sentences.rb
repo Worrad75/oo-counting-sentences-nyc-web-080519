@@ -19,9 +19,7 @@ class String
     count = 0
     
     while i < self.length do
-      if !self[i-1] == "." || self[i] == "?" || self[i] == "!"
-        count += 1 if is_ending?(self[i])
-      end
+      count += 1 if is_ending?(self[i-1]) == false && is_ending?(self[i])
       i +=1
     end
     
