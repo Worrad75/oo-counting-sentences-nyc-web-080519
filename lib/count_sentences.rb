@@ -22,5 +22,7 @@ class String
       count += 1 if self[i] == "." || self[i] == "?" || self[i] == "!"
       i +=1
     end
+    
+    count
   end
 end
