@@ -19,7 +19,7 @@ class String
     count = 0
     
     while i < self.length do
-      count += 1 
+      count += 1 if self[i] == "."
     end
   end
 end
